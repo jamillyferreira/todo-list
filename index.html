@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo-list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container-todo">
+      <header class="todo__header">
+        <h1 class="todo__header-title">todo <br/>list</h1>
+        <div class="todo__data">
+          <div class="darklight">
+            <button id="darklight-toggle">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+          </div>
+          <p class="todo__data-day" id="data-day"></p>
+          <span class="todo__data-month" id="data-month"></span>
+        </div>
+      </header>
+
+      <form class="todo__input">
+        <input type="text" name="task" class="task-input" id="task-input"
+          placeholder="Criar tarefa..."/>
+        <button type="submit" id="button">Adicionar</button>
+      </form>
+
+      <fieldset class="filter">
+        <legend>Filtrar tarefa</legend>
+        <button class="filter-all">Tudo</button>
+        <button class="filter-pending">Pendentes</button>
+        <button class="filter-completed">Concluídas</button>
+      </fieldset>
+
+      <output class="count-task">0 tarefas</output>
+      <ul id="task-list" class="task-list">
+        <!-- li adicionadas dinamicamente -->
+      </ul>
+      <section class="tasks-completed">
+        <h3>Concluídas</h3>
+        <ul class="tasks-list-completed">
+          <!-- li adicionadas dinamicamente -->
+        </ul>
+      </section>
+    </main>
+    <section class="modal">
+      <p class="modal-message">Mensagem</p>
+    </section>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
